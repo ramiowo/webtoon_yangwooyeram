@@ -1,17 +1,19 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import logo from "../../img/logo.png";
 
 const SHeader = styled.div`
   width: 100%;
   height: 80px;
-  background-color: #dbdbdb;
+  border-bottom: 1px solid #ededec;
+  display: flex;
+  align-items: center;
+
   a {
-    font-size: 20px;
-    font-weight: 800;
-    color: #333333;
-    span {
-      font-size: 24px;
-      font-weight: 800;
+    margin-left: 20px;
+    img {
+      width: 180px;
+      height: 30px;
     }
   }
 `;
@@ -20,7 +22,7 @@ const Header = () => {
   return (
     <SHeader>
       <Link to="/">
-        RAMI<span> 웹툰</span>
+        <img src={logo} alt="logo"></img>
       </Link>
     </SHeader>
   );

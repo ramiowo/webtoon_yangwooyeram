@@ -6,5 +6,8 @@ export const GlobalStyled = createGlobalStyle`
     li, a {
         text-decoration: none;
         display: block;
+        color: #333333;
     }
+
+
 `;

@@ -1,55 +1,63 @@
 import { Link } from "react-router-dom";
+import Webtoons from "../../data/Webtoons";
+import styled from "styled-components";
 
-const webtoons = [
-  {
-    id: 0,
-    posterImg:
-      "https://image-comic.pstatic.net/webtoon/808389/thumbnail/thumbnail_IMAG21_4a5ab33b-e6fe-4fbe-95b7-bd7fa6a9c156.jpg",
-    title: "나 혼자 탑에서 농사",
-    author: "켄타",
-  },
-  {
-    id: 1,
-    posterImg:
-      "https://image-comic.pstatic.net/webtoon/818360/thumbnail/thumbnail_IMAG21_f3247f6d-17dc-4c05-9f5d-7ff50b8a4b4c.jpg",
-    title: "우리는 후라이족",
-    author: "임형 / 이하경  / sdcknight",
-  },
-  {
-    id: 2,
-    posterImg:
-      "https://image-comic.pstatic.net/webtoon/828292/thumbnail/thumbnail_IMAG21_ae547aa9-f722-490b-a722-fc165fa11644.jpg",
-    title: "개집사",
-    author: "고추참치",
-  },
-  {
-    id: 3,
-    posterImg:
-      "https://image-comic.pstatic.net/webtoon/822239/thumbnail/thumbnail_IMAG21_5a915557-91af-430f-92e1-5c863a6944db.jpg",
-    title: "그렇게 물거품이 되어도",
-    author: "다홍",
-  },
-  {
-    id: 4,
-    posterImg:
-      "https://image-comic.pstatic.net/webtoon/807829/thumbnail/thumbnail_IMAG21_7a731990-1b33-4d79-8c00-e8fe03460618.jpg",
-    title: "평화식당",
-    author: "턍 / 서우서우",
-  },
-];
+const MainWrap = styled.div`
+  max-width: 1400px;
+  width: 100%;
+  height: 100vh;
+  /* background-color: #fefdf2; */
+  .subtitle {
+    padding: 30px 20px;
+    font-size: 24px;
+    font-weight: 800;
+  }
+`;
+
+const WebtoonsWrap = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+`;
+
+const Con = styled.div`
+  width: 230px;
+  img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 14px;
+  }
+  h2 {
+    font-size: 17px;
+    font-weight: 600;
+    padding-bottom: 8px;
+    color: #000000;
+  }
+  p {
+    font-size: 14px;
+    font-weight: 400;
+    color: #4e4e4e;
+  }
+`;
 
 const Main = () => {
   return (
-    <>
-      {webtoons.map((webtoon) => (
-        <div key={webtoon.id}>
-          <Link to="/sub/0">
-            <img src={webtoon.posterImg} alt={webtoon.title} />
-            <h2>{webtoon.title}</h2>
-          </Link>
-        </div>
-      ))}
-    </>
+    <MainWrap>
+      <h2 className="subtitle">당신에게 활력을 선사할 힐링웹툰 Best</h2>
+      <WebtoonsWrap>
+        {Webtoons.map((webtoon) => (
+          <Con key={webtoon.id}>
+            <Link to={`/sub/${webtoon.id}`}>
+              <img src={webtoon.posterImg} alt={webtoon.title} />
+              <h2>{webtoon.title}</h2>
+              <p>{webtoon.author}</p>
+            </Link>
+          </Con>
+        ))}
+      </WebtoonsWrap>
+    </MainWrap>
   );
 };
 
