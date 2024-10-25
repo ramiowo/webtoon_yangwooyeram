@@ -1,7 +1,9 @@
+import WebtoonApp from "./webtoonPage/WebtoonApp.js";
+
 function App() {
   return (
     <>
-      <div></div>
+      <WebtoonApp />
     </>
   );
 }
