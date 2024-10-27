@@ -34,10 +34,24 @@ const Con = styled.div`
     font-weight: 600;
     padding-bottom: 8px;
     color: #000000;
+    display: flex;
+
+    div {
+      width: 18px;
+      height: 13px;
+      border: 2px solid #ff4747;
+      border-radius: 3px;
+      color: #ff4747;
+      font-size: 8px;
+      font-weight: 800;
+      text-align: center;
+      line-height: 10px;
+      margin-right: 6px;
+    }
   }
   p {
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 600;
     color: #4e4e4e;
   }
 `;
@@ -51,7 +65,10 @@ const Main = () => {
           <Con key={webtoon.id}>
             <Link to={`/sub/${webtoon.id}`}>
               <img src={webtoon.posterImg} alt={webtoon.title} />
-              <h2>{webtoon.title}</h2>
+              <h2>
+                <div>Best</div>
+                {webtoon.title}
+              </h2>
               <p>{webtoon.author}</p>
             </Link>
           </Con>

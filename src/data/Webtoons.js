@@ -3,6 +3,8 @@ const Webtoons = [
     id: 0,
     posterImg:
       "https://image-comic.pstatic.net/webtoon/808389/thumbnail/thumbnail_IMAG21_4a5ab33b-e6fe-4fbe-95b7-bd7fa6a9c156.jpg",
+    subImg:
+      "https://image-comic.pstatic.net/webtoon/808389/1/thumbnail_202x120_312c7e14-5531-4463-93c9-58e5c7c91f66.jpg",
     title: "나 혼자 탑에서 농사",
     author: "켄타",
     episode: `어느 날 갑자기 도시에 나타난 정체불명의 탑.
