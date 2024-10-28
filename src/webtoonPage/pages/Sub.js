@@ -74,12 +74,13 @@ const TextWrap = styled.div`
     height: 40px;
     font-size: 12px;
     font-weight: 600;
-    color: #424242;
+    color: #bdbdbd;
     display: flex;
     gap: 4px;
     justify-content: center;
     align-items: center;
-    background-color: #bdbdbd;
+    border: 1px solid #bdbdbd;
+    background-color: #333333;
     border-radius: 10px;
     cursor: pointer;
   }
