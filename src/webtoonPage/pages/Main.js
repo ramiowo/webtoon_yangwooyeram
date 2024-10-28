@@ -3,14 +3,15 @@ import Webtoons from "../../data/Webtoons";
 import styled from "styled-components";
 
 const MainWrap = styled.div`
-  max-width: 1400px;
+  max-width: 640px;
   width: 100%;
   height: 100vh;
-  /* background-color: #fefdf2; */
+  margin: 0 auto;
   .subtitle {
     padding: 30px 20px;
     font-size: 24px;
-    font-weight: 800;
+    font-weight: 400;
+    color: #fff;
   }
 `;
 
@@ -22,7 +23,8 @@ const WebtoonsWrap = styled.div`
 `;
 
 const Con = styled.div`
-  width: 230px;
+  width: 180px;
+  margin-bottom: 20px;
   img {
     width: 100%;
     border-radius: 10px;
@@ -30,10 +32,10 @@ const Con = styled.div`
     margin-bottom: 14px;
   }
   h2 {
-    font-size: 17px;
+    font-size: 14px;
     font-weight: 600;
-    padding-bottom: 8px;
-    color: #000000;
+    padding-bottom: 6px;
+    color: #ffffff;
     display: flex;
 
     div {
@@ -43,23 +45,22 @@ const Con = styled.div`
       border-radius: 3px;
       color: #ff4747;
       font-size: 8px;
-      font-weight: 800;
       text-align: center;
-      line-height: 10px;
+      line-height: 13px;
       margin-right: 6px;
     }
   }
   p {
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 600;
-    color: #4e4e4e;
+    color: #fff;
   }
 `;
 
 const Main = () => {
   return (
     <MainWrap>
-      <h2 className="subtitle">당신에게 활력을 선사할 힐링웹툰 Best</h2>
+      <h2 className="subtitle">당신에게 심쿵을 선사할 힐링웹툰 Best</h2>
       <WebtoonsWrap>
         {Webtoons.map((webtoon) => (
           <Con key={webtoon.id}>

@@ -3,14 +3,17 @@ import styled from "styled-components";
 import logo from "../../img/logo.png";
 
 const SHeader = styled.div`
+  max-width: 640px;
   width: 100%;
   height: 80px;
   border-bottom: 1px solid #ededec;
   display: flex;
   align-items: center;
+  margin: 0 auto;
 
   a {
-    margin-left: 20px;
+    margin: 0 auto;
+
     img {
       width: 180px;
       height: 30px;
